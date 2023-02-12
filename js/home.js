@@ -48,3 +48,42 @@ try {
 // setInterval(function () {
 //   text.style.color = text.style.color == 'white' ? 'transparent' : 'white';
 // }, 500);
+
+// const text = document.querySelector('#animated-text');
+// const textContent = text.textContent;
+// text.innerHTML = '';
+
+// for (let i = 0; i < textContent.length; i++) {
+//   const span = document.createElement('span');
+//   span.textContent = textContent[i];
+//   text.appendChild(span);
+//   const dot = document.createElement('div');
+//   dot.classList.add('dot');
+//   dot.style.top = `${span.offsetTop + span.offsetHeight / 2 - 4}px`;
+//   text.appendChild(dot);
+// }
+
+// /* */
+// const letterContainers = document.querySelectorAll('.letter-container');
+// const point = document.querySelector('.point');
+
+// let i = 0;
+// let j = 0;
+
+// const step = () => {
+//   const letterContainer = letterContainers[i];
+//   const letterOutline = letterContainer.querySelector('.letter-outline');
+//   const outlinePath = letterOutline.getAttribute('data-outline').split(',');
+//   point.style.top = `${
+//     letterContainer.offsetTop + parseInt(outlinePath[j * 2])
+//   }px`;
+//   point.style.left = `${
+//     letterContainer.offsetLeft + parseInt(outlinePath[j * 2 + 1])
+//   }px`;
+//   j = (j + 1) % outlinePath.length;
+//   if (j === 0) {
+//     i = (i + 1) % letterContainers.length;
+//   }
+// };
+
+// setInterval(step, 1000);
