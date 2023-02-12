@@ -1,3 +1,4 @@
+@import url(' https://fonts.cdnfonts.com/css/brandon-grotesque-regular ');
 :root {
   /* Major colors  */
   --primary: #22d2b3;
@@ -20,10 +21,11 @@
   --defaultFont: 'Montserrat';
   --Oswald: 'Oswald';
 }
-/* * {
+* {
   margin: 0;
   padding: 0;
-} */
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
@@ -99,6 +101,7 @@ li {
 }
 .registerNavbarBtn {
   background-color: var(--secundary);
+
   color: var(--whiteColor);
   padding: 7px 25px;
   border-radius: 5px;
@@ -167,6 +170,7 @@ li {
   margin-top: -10px;
   width: 140%;
 } */
+
 /* Media query */
 
 @media (max-width: 992px) {
@@ -180,7 +184,9 @@ li {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: var(--transparentdarkColor);
+    /* background-color: var(--transparentdarkColor); */
+    /* background-image: url(https://images.pexels.com/photos/1341279/pexels-photo-1341279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
+
     backdrop-filter: blur(6px);
     display: none;
     flex-direction: column;
@@ -189,6 +195,19 @@ li {
     row-gap: 30px;
     padding: 20px 0 0 0;
     margin-top: 0px;
+  }
+  .navbarMenu::before {
+    content: '';
+    background-image: url(https://images.pexels.com/photos/1341279/pexels-photo-1341279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
   }
 
   .coletaLeadLogin,
@@ -217,5 +236,78 @@ li {
   .containerNavbar i {
     display: block;
   }
+
+  /* Terrestrial Globe section */
+  .terrestrialGlobeSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    /* background-image: url(https://images.pexels.com/photos/1341279/pexels-photo-1341279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
+    background-size: cover;
+    overflow: hidden;
+  }
+  /* ########## */
+  /* #animated-text {
+    font-size: 72px;
+    background: linear-gradient(to right, blue, lightblue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  } */
+  #animated-text {
+    font-size: 50px;
+    background: linear-gradient(
+      to right,
+      var(--secundary),
+      lightblue,
+      var(--whiteColor),
+      lightblue,
+      var(--secundary)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 300% auto;
+    animation: shine 15s linear infinite;
+    font-family: var(--defaultFont), sans-serif;
+    font-weight: bold;
+    text-align: center;
+  }
+  .dow-text {
+    font-size: 25px;
+    margin: 0;
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: -100%;
+    }
+    100% {
+      background-position: 200%;
+    }
+  }
+  /* ########## */
+
+  .globe {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-image: url(https://www.guiageografico.com/mapas/mapa/imagem-mundo.jpg);
+    /* background-image: url(https://teletime.com.br/wp-content/uploads/2021/03/earth-3866609-696x442.jpg); */
+    background-size: cover;
+    box-shadow: -14px -14px 14px black inset, 5px 5px 17px white inset,
+      0px 0px 8px #3a86ff;
+    animation: rotate 35s linear infinite;
+    margin-bottom: -100px;
+  }
+  @keyframes rotate {
+    to {
+      background-position: 100%;
+    }
+  }
+  /* End of Terrestrial Globe section */
   /* End Navbar */
 }

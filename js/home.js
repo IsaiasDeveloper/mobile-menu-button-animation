@@ -43,3 +43,8 @@ try {
   console.warn(er);
 }
 // End of Navbar
+// let text = document.getElementById('animated-text');
+
+// setInterval(function () {
+//   text.style.color = text.style.color == 'white' ? 'transparent' : 'white';
+// }, 500);
