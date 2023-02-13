@@ -157,6 +157,9 @@ li {
   background-color: var(--blackColor);
   /* transition: 0.8s; */
 }
+.animated-text {
+  display: none;
+}
 /* .menuMobileBars:nth-child(2) {
   display: none;
 }
@@ -250,9 +253,15 @@ li {
       to right,
       var(--secundary),
       var(--secundary),
+      var(--secundary),
+      var(--secundary),
+      var(--secundary),
       lightblue,
       var(--whiteColor),
       lightblue,
+      var(--secundary),
+      var(--secundary),
+      var(--secundary),
       var(--secundary),
       var(--secundary)
     );
@@ -342,10 +351,10 @@ li {
   }
 
   @keyframes shine {
-    0% {
+    100% {
       background-position: -100%;
     }
-    100% {
+    0% {
       background-position: 200%;
     }
   }
