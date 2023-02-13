@@ -45,4 +45,20 @@ try {
 } catch (er) {
   console.warn(er);
 }
+
+// let mapImgList = [
+//   'https://www.guiageografico.com/mapas/mapa/imagem-mundo.jpg',
+//   'https://portaldiplomatico.mne.gov.pt/images/politica_externa/Africa_Subsariana.jpg?47974c0dd017fe03ac68b2582b714c76',
+// ];
+// // let techMap =
+// //   'https://implantnewsperio.com.br/wp-content/uploads/2020/02/implacil-de-bortoli-nos-eua_27-02-2020.png';
+// let correntImgIdx = 0;
+// let globe = document.querySelector('.globe');
+
+// function updateBackgroundImage() {
+//   globe.style.backgroundImage = `url(${mapImgList[correntImgIdx]})`;
+//   correntImgIdx = (correntImgIdx + 1) % mapImgList.length;
+//   console.log(correntImgIdx);
+// }
+// setInterval(updateBackgroundImage, 2000);
 // End of Navbar
