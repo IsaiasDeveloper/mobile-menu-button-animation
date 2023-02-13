@@ -11,8 +11,7 @@ try {
   mobileMenu.addEventListener('click', () => {
     console.log(clickOnMenu);
     if (clickOnMenu) {
-      setTimeout(() => (clickOnMenu = false), 350);
-
+      setTimeout(() => (clickOnMenu = false), 450);
       navbarMenuMobile.style.display = 'flex';
       barsMenuList.forEach((bar, idx) => {
         if (idx === 0) {
@@ -26,7 +25,7 @@ try {
         }
       });
     } else {
-      setTimeout(() => (clickOnMenu = true), 350);
+      setTimeout(() => (clickOnMenu = true), 450);
       navbarMenuMobile.style.display = 'none';
       barsMenuList.forEach((bar, idx) => {
         if (idx === 0) {
