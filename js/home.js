@@ -11,7 +11,7 @@ try {
   mobileMenu.addEventListener('click', () => {
     console.log(clickOnMenu);
     if (clickOnMenu) {
-      setTimeout(() => (clickOnMenu = false), 450);
+      // clickOnMenu = false;
       navbarMenuMobile.style.display = 'flex';
       barsMenuList.forEach((bar, idx) => {
         if (idx === 0) {
@@ -24,8 +24,9 @@ try {
             'transform: rotate(50deg); margin-top: -10px;transition: 0.6s;width: 130%;';
         }
       });
+      setTimeout(() => (clickOnMenu = false), 600);
     } else {
-      setTimeout(() => (clickOnMenu = true), 450);
+      // clickOnMenu = false;
       navbarMenuMobile.style.display = 'none';
       barsMenuList.forEach((bar, idx) => {
         if (idx === 0) {
@@ -38,6 +39,7 @@ try {
             'transform: rotate(0deg); transition: 0.6s;width: 100%;';
         }
       });
+      setTimeout(() => (clickOnMenu = true), 600);
     }
   });
 } catch (er) {
