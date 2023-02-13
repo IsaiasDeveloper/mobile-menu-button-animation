@@ -174,10 +174,14 @@ li {
   width: 140%;
 } */
 
+/* Example section */
 .exampleSection {
   width: 100%;
   margin-top: 60px;
-  color: var(--blackColor);
+  color: var(--whiteColor);
+  background-image: url(https://images.pexels.com/photos/5439/earth-space.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-position: center center;
+  background-size: cover;
 }
 .exampleContaner {
   max-width: 1000px;
@@ -186,8 +190,9 @@ li {
   margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  padding-bottom: 20px;
 }
 .title {
   text-align: center;
@@ -198,6 +203,39 @@ li {
   font-weight: bold;
   margin-top: 15px;
 }
+/* End of Example section */
+
+/* Example section */
+.simpleSection {
+  width: 100%;
+  padding: 50px 0;
+  color: var(--blackColor);
+}
+.simpleContaner {
+  max-width: 1000px;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.simpleText {
+  text-align: justify;
+  text-indent: 50px;
+  margin-bottom: 10px;
+}
+.simpleBox {
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between;
+  align-items: start; */
+  column-gap: 15px;
+}
+.simpleBox img {
+  width: 40%;
+}
+/* End of Example section */
 /* Media query */
 
 @media (max-width: 992px) {
@@ -225,7 +263,7 @@ li {
     background-image: url(https://images.pexels.com/photos/1341279/pexels-photo-1341279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.6;
+    opacity: 0.9;
     top: 0;
     left: 0;
     bottom: 0;
