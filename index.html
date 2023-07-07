@@ -226,9 +226,61 @@
       <div class="globe"></div>
     </section> -->
     <!-- End of Terrestrial Globe section -->
+    <!-- Buttun section -->
+    <div class="newButtonBox">
+      <p class="registerNewButton">MATRICULE-SE</p>
+    </div>
+    <!-- End of Buttun section -->
+
+    <!-- Form section  -->
+    <div class="formSection">
+      <div class="formSectionContainer">
+        <div class="formSectionClosed">X</div>
+        <div class="formSectionContent">
+          <p class="formSectionTitle">Formulário de coleta de lead</p>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="formSectionInput"
+            placeholder="Digite seu nome..."
+          />
+          <input
+            type="text"
+            name="telefone"
+            id="telefone"
+            class="formSectionInput"
+            placeholder="Digite seu telefone..."
+          />
+          <input
+            type="text"
+            name="email"
+            id="email"
+            class="formSectionInput"
+            placeholder="Digite seu e-mail..."
+          />
+          <buttun class="btnEnviarLead">Ver Valores</buttun>
+        </div>
+      </div>
+    </div>
+    <!-- End of Form section  -->
+
+    <!-- Footer section -->
+    <footer>
+      <div class="footerContainer">
+        <p>Copyright - Desenvolvido por alguém</p>
+      </div>
+    </footer>
+
+    <!-- End of Footer section -->
 
     <script src="js/home.js"></script>
     <!-- Javascript link -->
     <!-- <script src="https://boabolsa.com.br/assets/js/template_classic/scriptHome.js" defer></script> -->
   </body>
 </html>
+<script></script>
+let labelCheck = document.querySelector('.form-check-label')
+labelCheck.innerHTML += `<a href="refund" class="/comofunciona">
+  Política de Reembolso</a
+>`

@@ -30,6 +30,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--defaultFont);
+  position: relative;
+  overflow-x: hidden;
 }
 
 /* Navbar */
@@ -238,6 +240,199 @@ li {
 /* End of Example section */
 /* Media query */
 
+/* Buttun section */
+.newButtonBox {
+  position: absolute;
+  right: 80px;
+  bottom: 50px;
+  width: auto;
+  display: flex;
+}
+.registerNewButton {
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: var(--primary);
+  color: var(--whiteColor);
+  padding: 8px 25px;
+  width: auto;
+  text-align: center;
+  border-radius: 15px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.5s;
+  animation: zoomAnimation ease 1.2s infinite;
+}
+.registerNewButton:hover {
+  background-color: var(--whiteColor);
+  color: var(--primary);
+  border: 1px solid;
+}
+@keyframes zoomAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* End of Buttun section */
+
+/* Form section */
+/* Popup test */
+/* .formSection {
+  background-color: var(--transparentdarkColor);
+  backdrop-filter: blur(6px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+.formSectionContainer {
+  width: auto;
+  height: auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
+  background-color: var(--whiteColor);
+}
+.formSectionClosed {
+  width: auto;
+  display: block;
+  text-align: end;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.formSectionClosed:hover {
+  transform: scale(1.05);
+}
+.formSectionContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.formSectionTitle {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.formSectionInput {
+  width: 100%;
+  margin-bottom: 15px;
+  height: 35px;
+}
+.btnEnviarLead {
+  background-color: var(--primary);
+  color: var(--whiteColor);
+  border-radius: 15px;
+  text-transform: uppercase;
+  padding: 8px 20px;
+} */
+/* End of Popup test */
+
+/* Fly Windows */
+.formSection {
+  max-width: 350px;
+  width: 90%;
+  height: auto;
+  display: flex;
+  box-shadow: 0 0 40px -16px var(--blackColor);
+  position: fixed;
+  bottom: 23px;
+  right: -435px;
+  background-color: var(--whiteColor);
+  transition: all 0.5s;
+  z-index: 100;
+}
+.formSectionContainer {
+  width: 100%;
+  display: block;
+  text-align: center;
+  position: relative;
+  padding: 25px;
+}
+.formSectionClosed {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  left: auto;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.formSectionClosed:hover {
+  transform: scale(1.05);
+}
+.formSectionContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.formSectionTitle {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.formSectionContent .formFields {
+  width: 100% !important;
+  height: 35px !important;
+  padding-left: 15px !important;
+  margin-bottom: 15px !important;
+  font-family: var(--defaultFont) !important;
+}
+.formSectionContent .form-check {
+  width: 100% !important;
+  display: flex !important;
+  font-size: 12px !important;
+  align-items: center !important;
+  column-gap: 10px !important;
+  padding-left: 20px !important;
+}
+.formSectionContent #btnEnviarLead {
+  background-color: var(--primary) !important;
+  color: var(--whiteColor) !important;
+  border-radius: 15px !important;
+  text-transform: uppercase !important;
+  padding: 8px 20px !important;
+  font-weight: bold !important;
+  white-space: nowrap !important;
+  width: auto !important;
+}
+.formSectionContent #lblMsg {
+  color: var(--primary) !important;
+}
+/* End of Fly Windows */
+/* End of Form section */
+
+/* Footer section  */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  background-color: var(--grayColor);
+  color: var(--whiteColor);
+}
+/* End of Footer section  */
 @media (max-width: 992px) {
   /* Navbar */
   .menuMobileBtn {

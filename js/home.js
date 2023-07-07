@@ -62,3 +62,65 @@ try {
 // }
 // setInterval(updateBackgroundImage, 2000);
 // End of Navbar
+
+// Popup form
+function popupForm() {
+  const formSection = document.querySelector('.formSection');
+  const closedForm = document.querySelector('.formSectionClosed');
+  const toCartBtn = document.querySelector('.registerNewButton');
+  toCartBtn.addEventListener('click', () => {
+    formSection.style.display = 'flex';
+  });
+  closedForm.addEventListener('click', function () {
+    formSection.style.display = 'none';
+  });
+  formSection.addEventListener('click', function (e) {
+    const elementClicked = e.target;
+    if (elementClicked.classList.contains('formSection')) {
+      formSection.style.display = 'none';
+    }
+  });
+}
+// popupForm();
+// End of Popup form
+
+//Fly windows
+function flyWindow() {
+  let labelCheck = document.querySelector('.form-check-label');
+  labelCheck.innerHTML += `<a href="refund" class="/comofunciona"> Política de Reembolso</a>`;
+  const formSection = document.querySelector('.formSection');
+  const closedForm = document.querySelector('.formSectionClosed');
+  const toCartBtn = document.querySelector('.registerNewButton');
+  toCartBtn.addEventListener('click', function () {
+    formSection.style.right = '85px';
+    // console.log('teste');
+  });
+  closedForm.addEventListener('click', function () {
+    formSection.style.right = '-435px';
+  });
+
+  document.addEventListener('click', function (e) {
+    const elementClicked = e.target;
+    if (
+      !(
+        elementClicked.classList.contains('formSectionContainer') ||
+        elementClicked.classList.contains('formSectionTitle') ||
+        elementClicked.classList.contains('formSectionContent') ||
+        elementClicked.classList.contains('form-check-input') ||
+        elementClicked.classList.contains('form-check-label') ||
+        elementClicked.classList.contains('form-check') ||
+        elementClicked.classList.contains('formFields') ||
+        elementClicked.classList.contains('newButtonText') ||
+        elementClicked.id === 'formCadastro' ||
+        elementClicked.id === 'lblMsg' ||
+        elementClicked.id === 'btnEnviarLead'
+      )
+    ) {
+      formSection.style.right = '-435px';
+    }
+  });
+}
+flyWindow();
+// End of Fly windows
+
+console.log('if');
