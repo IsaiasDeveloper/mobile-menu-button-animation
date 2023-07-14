@@ -87,7 +87,7 @@ function popupForm() {
 //Fly windows
 function flyWindow() {
   let labelCheck = document.querySelector('.form-check-label');
-  labelCheck.innerHTML += `<a href="refund" class="/comofunciona"> Política de Reembolso</a>`;
+  labelCheck.innerHTML += ` <a href="/comofunciona" target="_blank" class="refundPage">Política de Reembolso</a>`;
   const formSection = document.querySelector('.formSection');
   const closedForm = document.querySelector('.formSectionClosed');
   const toCartBtn = document.querySelector('.registerNewButton');
@@ -111,6 +111,7 @@ function flyWindow() {
         elementClicked.classList.contains('form-check') ||
         elementClicked.classList.contains('formFields') ||
         elementClicked.classList.contains('newButtonText') ||
+        elementClicked.classList.contains('refundPage') ||
         elementClicked.id === 'formCadastro' ||
         elementClicked.id === 'lblMsg' ||
         elementClicked.id === 'btnEnviarLead'
@@ -124,3 +125,22 @@ flyWindow();
 // End of Fly windows
 
 console.log('if');
+
+// ↓ Para o cliente https://unigr6.com.br/
+(function () {
+  function removeBePartnerLinkFooter() {
+    try {
+      const linksFooterList = [
+        ...document.querySelectorAll('.infoBoxLeftFooter a'),
+      ];
+      linksFooterList.forEach((e) => {
+        if (e.textContent === 'Seja Parceiro') e.style.display = 'none';
+        return;
+      });
+    } catch (e) {
+      console.warn(e);
+    }
+  }
+
+  removeBePartnerLinkFooter();
+})();
